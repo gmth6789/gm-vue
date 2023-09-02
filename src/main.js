@@ -1,4 +1,13 @@
-const { createApp } = require('vue');
-import App from "./App.vue";
+import './assets/main.css'
 
-createApp(App).mount("#app");
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router'
+import './Firebase'
+
+Vue.config.productionTip = false
+
+new Vue({
+    router,
+    render: h => h(App)
+}).$mount('#app')
